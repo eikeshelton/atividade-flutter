@@ -1,6 +1,8 @@
 # atividade_flutter
 
-A new Flutter project.
+projeto da atividade para o dia 15/04/2024 
+alunos:eike,laura lemos,anderson gabriel.
+em fotos mostra o aplicativo funcionando
 
 ## Getting Started
 
