@@ -7,9 +7,7 @@ import 'package:atividade_flutter/provider/task_provider.dart';
 import 'package:atividade_flutter/util/date_formatted.dart';
 
 class AddTaskPage extends StatefulWidget {
-  const AddTaskPage({
-    super.key,
-  });
+  const AddTaskPage({super.key});
 
   @override
   State<AddTaskPage> createState() => _AddTaskPageState();
@@ -86,7 +84,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                     controller: titleController,
                     keyboardType: TextInputType.name,
                     decoration: const InputDecoration(
-                      labelText: 'Title',
+                      labelText: 'tarefa',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -112,7 +110,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                               selectedDate = value;
                             }));
                       },
-                      child: const Text('Select Date'),
+                      child: const Text('data'),
                     ),
                     if (selectedDate != null)
                       Padding(
@@ -124,10 +122,11 @@ class _AddTaskPageState extends State<AddTaskPage> {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 DropdownMenu<TaskStatus>(
                   label: const Text("Status"),
+                  width: 200,
                   onSelected: (value) {
                     setState(() {
                       selectedStatus = value;
@@ -151,7 +150,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                 ),
                 ElevatedButton(
                   onPressed: addTask,
-                  child: const Text('Add Task'),
+                  child: const Text('adicionar tarefa'),
                 )
               ],
             ),
